@@ -50,7 +50,8 @@ public class ListH<E> extends AbstractList<E> {
         } else {
             if (j == 0) {
                 return tail.getNext().getItem();
-                Node2<E> curNode = tail.getNext();
+                Node2<E> curNode;
+                curNode = tail.getNext();
                 for (int i = 0; i < j; i++) {
                     tmp = curNode.getNext().getItem();
                     curNode.setNext(curNode.getNext().getNext());
@@ -58,8 +59,9 @@ public class ListH<E> extends AbstractList<E> {
                 }
 
             }
-            return tmp;
+            
         }
+        return tmp;
     }
     
     public void add(int j, E u){
