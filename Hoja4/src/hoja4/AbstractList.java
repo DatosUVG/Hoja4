@@ -9,7 +9,7 @@ package hoja4;
  *
  * @author andyq
  */
-public abstract class AbstractList<E> implements ListsH<E> {
+public abstract class AbstractList<E> implements ListH<E> {
     
     public AbstractList(){
     
