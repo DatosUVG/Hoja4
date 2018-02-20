@@ -9,7 +9,7 @@ package hoja4;
  *
  * @author andyq
  */
-public abstract class AbstractList<E> implements ListH<E> {
+public abstract class AbstractList<E> implements ListU<E> {
     
     public AbstractList(){
     
@@ -47,8 +47,8 @@ public abstract class AbstractList<E> implements ListH<E> {
         addLast(value);
     }
     
-    public void remove(){
-        removeLast();
+    public E remove(){
+        return removeLast();
     }
     
     public E get(){

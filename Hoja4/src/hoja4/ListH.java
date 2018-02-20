@@ -50,6 +50,9 @@ public class ListH<E> extends AbstractList<E> {
         } else {
             if (j == 0) {
                 return tail.getNext().getItem();
+                
+                //I don't understand why this happens
+                
                 Node2<E> curNode;
                 curNode = tail.getNext();
                 for (int i = 0; i < j; i++) {

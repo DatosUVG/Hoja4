@@ -21,7 +21,7 @@ import java.util.Stack;
 public class ImpCal implements Calcu{
     //This section has been taken from the original calculator file
     
-    
+    public static ImpCal in;
     //Errors 
     private final String ERROR_INVALID_CHAR = "ERROR: Expression contains an invalid character";
     private final String ERROR_INVALID_DIVISION = "ERROR: This division is not posible";
@@ -32,7 +32,7 @@ public class ImpCal implements Calcu{
     
     
     public ImpCal(){
-        stack = new ImpStack();
+        stack = new Stack();
     }
     
     /* 
@@ -40,7 +40,6 @@ public class ImpCal implements Calcu{
     * calculates based on the expression
     */
     
-    @Override
     public String calcular(String exp){
         String result = " ";
         for(char a : exp.toCharArray()){
@@ -133,4 +132,12 @@ public class ImpCal implements Calcu{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+     public static ImpCal getIns(int opt)
+    {
+        if(in == null)
+        {
+            in = new ImpCal(opt);
+        }
+        return in;
+    }
 }
